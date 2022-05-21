@@ -1,0 +1,271 @@
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  width: 15%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+  border: 1px solid transparent;
+}
+
+.active1, .dot:hover {
+  border: 3px solid orange;
+  border-radius: 10px;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+.card-peopl1e {
+  position: relative;
+}
+
+.card-people1 img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.orange{
+  color:orange;
+}
+
+.circle {
+  height: 10px;
+  width: 10px;
+  background-color: lightgreen;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.tabs {
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  position: relative;
+  background: white;
+  width: 100%;
+  border-radius: 5px;
+  min-width: 240px;
+  min-height: 500px;
+}
+
+.tabs ul {
+  position: relative;
+}
+
+.tabs ul li {
+  display: inline-block;
+}
+
+.tabs ul li label {
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  color: #929daf;
+  padding: 5px auto;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  white-space: nowrap;
+  -webkit-touch-callout: none;
+  user-select: none;
+}
+
+.tabs ul li label:hover, .tabs ul li label:focus, .tabs ul li label:active {
+  outline: 0;
+  color: #bec5cf;
+}
+
+.tabs .slider {
+  position: relative;
+  width: 13%;
+  -webkit-transition: all 0.33s cubic-bezier(0.38, 0.8, 0.32, 1.07);
+  transition: all 0.33s cubic-bezier(0.38, 0.8, 0.32, 1.07);
+}
+
+.tabs .slider .indicator {
+  position: relative;
+  width: 100px;
+  height: 4px;
+  background: orange;
+  border-radius: 1px;
+}
+
+.tabs .content section {
+  display: none;
+  -webkit-animation-name: content;
+  animation-name: content;
+  -webkit-animation-direction: normal;
+  animation-direction: normal;
+  -webkit-animation-duration: 0.3s;
+  animation-duration: 0.3s;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+  line-height: 1.4;
+}
+
+.tabs input[name="tab-control"]:nth-of-type(1):checked ~ ul > li:nth-child(1) > label {
+  cursor: default;
+  color: orange;
+}
+
+.tabs input[name="tab-control"]:nth-of-type(4):checked ~ .slider {
+  -webkit-transform: translateX(300%);
+          transform: translateX(300%);
+}
+.tabs input[name="tab-control"]:nth-of-type(4):checked ~ .content > section:nth-child(4) {
+  display: block;
+}
+
+.tabs input[name="tab-control"] {
+  display: none;
+}
+
+@-webkit-keyframes content {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(5%);
+    transform: translateY(5%);
+ }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0%);
+    transform: translateY(0%);
+ }
+}
+
+@keyframes content {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(5%);
+    transform: translateY(5%);
+ }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0%);
+    transform: translateY(0%);
+ }
+}
+
+@media (max-width: 1000px) {
+  .tabs ul li label {
+    white-space: initial;
+ }
+}
+
+.tabs input[name="tab-control"]:nth-of-type(1):checked ~ .slider {
+  -webkit-transform: translateX(0%);
+  transform: translateX(0%);
+}
+
+.tabs input[name="tab-control"]:nth-of-type(1):checked ~ .content > section:nth-child(1) {
+  display: block;
+}
+
+.tabs input[name="tab-control"]:nth-of-type(2):checked ~ ul > li:nth-child(2) > label {
+  cursor: default;
+  color: orange;
+}
+
+.tabs input[name="tab-control"]:nth-of-type(2):checked ~ .slider {
+  -webkit-transform: translateX(100%);
+  transform: translateX(100%);
+}
+
+.tabs input[name="tab-control"]:nth-of-type(2):checked ~ .content > section:nth-child(2) {
+  display: block;
+}
+.tabs input[name="tab-control"]:nth-of-type(3):checked ~ ul > li:nth-child(3) > label {
+  cursor: default;
+  color: orange;
+}
+
+.tabs input[name="tab-control"]:nth-of-type(3):checked ~ .slider {
+  -webkit-transform: translateX(200%);
+  transform: translateX(200%);
+}
+
+.tabs input[name="tab-control"]:nth-of-type(3):checked ~ .content > section:nth-child(3) {
+  display: block;
+}
+
+.tabs input[name="tab-control"]:nth-of-type(4):checked ~ ul > li:nth-child(4) > label {
+  cursor: default;
+  color: orange;
+}
+
+table {
+  width: 100%;
+  max-width: 50rem;
+}
+
+table tr:nth-child(even) th {
+  color: #ccc;
+  font-weight: normal;
+}
+
+table th {
+  font-weight: normal;
+  border-top: thin dotted #ccc;
+}
+table td {
+  font-size: 0.8rem;
+  font-weight: bold;
+  line-height: 1.4;
+  border-radius: 1.2rem;
+  border: 7px solid #FFF;
+  transition: opacity 0.3s ease;
+}
+table td > span {
+  font-size: 0.8em;
+  font-weight: normal;
+  display: block;
+  width: 100%;
+}
+
+.ungu{
+  background-color: rgb(187, 76, 187);
+}
+
+.hijau{
+  background-color: #9ccc65;
+}
+
+.orange1 {
+  background-color: #ff8a65;
+}
+
+.biru {
+  background-color: #b3e5fc;
+}
+
+.bulat {
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  text-align: center;
+  font-size: 12px;
+  display: flex;
+  height: 60px;
+  width: 60px;
+  color: #fff;
+  background: orange;
+  position : relative;
+}
